@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>11-785 Deep Learning</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="http://www.qatar.cmu.edu/cs/10601/img/favicon.ico">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5em;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        b {
+            font-weight: 400;
+        }
+
+        footer {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #b05145;
+        }
+
+        h3 {
+            color: #bf766d;
+            font-weight: 300;
+        }
+
+        a, a:hover {
+            color: #b05145;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .titlebar {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            overflow: auto;
+            white-space: normal;
+        }
+
+        @media (max-width: 1200px) {
+            .titlebar {
+                text-align: center;
+            }
+        }
+
+        .titlebar-img {
+            width: 180px;
+            height: 180px;
+            /*float: left;*/
+        }
+
+        .titlebar-text {
+            max-width: 66.66666667%;
+            float: left;
+            white-space: normal;
+        }
+
+        .title-col {
+            text-align: center;
+            display: inline;
+        }
+
+        .title {
+            font-size: 3em;
+        }
+
+        .subtitle {
+            font-size: 2em;
+        }
+
+        .infoline {
+            width: 100%;
+        }
+
+        .infoline-heading {
+            width: 130px;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .infoline-text {
+            width: 50%;
+            text-align: left;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+
+        .grade-table {
+            width: 100%;
+        }
+
+        .grade-table-header {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+
+        .grade-table-bottom {
+            border-top-width: 1px;
+            border-top-style: solid;
+        }
+
+        .textbook {
+            display: block;
+            height: 95px;
+            margin-bottom: 10px;
+        }
+
+        .textbook-img-container {
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+        }
+
+            .textbook-img-container img {
+                height: 95px;
+                width: 70px;
+                border-radius: 2px;
+            }
+
+        .textbook-info-item {
+            display: block;
+        }
+
+        .vcenter {
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
+        }
+
+        #logo {
+            width: 90%;
+            height: auto;
+        }
+
+        .ul {
+            list-style: none;
+            padding-left: 1.2em;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container titlebar">
+        <div class="row">
+            <!--div class="titlebar-img title-col vcenter">
+                <img id="logo" src="./img/brain.png">
+            </div-->
+            <div class="title-col vcenter" style="color:#A80000;font-weight:bold;text-align:center;width:100%">
+                <div class="title"><b>11-485/785</b> Introduction to Deep Learning</div>
+                <div class="subtitle"><i>Fall 2018</i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" container">
+        <div class="row">
+            <p style="margin-top:75px;">
+                &ldquo;Deep Learning&rdquo; systems, typified by deep neural networks, are increasingly taking over all AI tasks, ranging from language understanding, and speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is fast changing from an esoteric desirable to a mandatory prerequisite in many advanced academic settings, and a large advantage in the industrial job market.
+            </p>
+            <p> In this course we will learn about the basics of deep neural networks, and their applications to various AI tasks. By the end of the course, it is expected that students will have significant familiarity with the subject, and be able to apply Deep Learning to a variety of tasks. They will also be positioned to understand much of the current literature on the topic and extend their knowledge through further study.</p>
+            <h3>Course description from student point of view</h3>
+            <p>The course is well rounded in terms of concepts. It helps us understand the fundamentals of Deep Learning. The course starts off gradually with MLPs and it progresses into the more complicated concepts such as attention and sequence-to-sequence models. We get a complete hands on with PyTorch which is very important to implement Deep Learning models. As a student, you will learn the tools required for building Deep Learning models. The homeworks usually have 2 components which is Autolab and Kaggle. The Kaggle components allow us to explore multiple architectures and understand how to fine-tune and continuously improve models. The task for all the homeworks were similar and it was interesting to learn how the same task can be solved using multiple Deep Learning approaches. Overall, at the end of this course you will be confident enough to build and tune Deep Learning models.</p>
+
+            <h4><a href="feedback.html" target="_blank">What students say about the previous edition of the course</a></h4>
+            <p><b style="color:#A80000;">Instructor:</b> Bhiksha Raj</p>
+            <ul style="margin-top:-10px;">
+                <li>bhiksha@cs.cmu.edu</li>
+            </ul>
+            <p>
+                <b style="color:#A80000;">TAs:</b>
+                <ul>
+                    <li> Ryan Brigden (rbrigden@andrew.cmu.edu) </li>
+                    <li> Raphael Franck Olivier (rolivier@andrew.cmu.edu) </li>
+                    <li> Sai Nihar Tadichetty (ntadiche@andrew.cmu.edu) </li>
+                    <li> Sai Abishek Bhaskar (sabhaska@andrew.cmu.edu) </li>
+                    <li> Soham Ghosh (sohamg@andrew.cmu.edu) </li>
+                    <li> Madhura Das (madhurad@andrew.cmu.edu) </li>
+                    <li> Ipsita Prakash (iprakash@andrew.cmu.edu) </li>
+                    <li> Dhruv Shah (ddshah@andrew.cmu.edu) </li>
+                    <li> Shaden Shaar (sshaar@andrew.cmu.edu) </li>
+                    <li> Omar Khattab for Doha (okhattab@cmu.edu) </li>
+                    <li> Nebiyou Yismaw for Kigali (nyismaw@andrew.cmu.edu) </li>
+                    <li> David Zhang (davidz1@andrew.cmu.edu) </li>
+                    <li> Zeqiang Huang (zqeiangh@andrew.cmu.edu)</li>
+                    <li> Pooja Chitkara (pchitkara@andrew.cmu.edu) </li>
+                </ul>
+                <!-- <p style="font-size: 12px;">* contingent on registration</p> -->
+            <p><b style="color:#A80000;">Lecture:</b> Monday and Wednesday, 9.00am-10.20am</p>
+            <p><b style="color:#A80000;">Location:</b> Gates-Hillman Complex GHC 4102</p>
+            <p><b style="color:#A80000;">Recitation:</b> Friday, 9.00am-10.20am, <b>Location: </b> TBD</p>
+            <p>
+                <b style="color:#A80000;">Office hours:</b>
+                <ul>
+                    <!-- <li> Tuesday @ 3:30pm-5:00pm Location TBD</li>
+                    <li> Friday @ 10:30am-12:00pm NSH Atrium</li>
+                    <li> Doha: Sunday and Tuesday @ 5:00pm-6:30pm (Quatar Time)</li>
+                    <li> Kigali: TBD</li>
+                    <li> Bhiksha: Thursday, 11:00am-12:00pm</li> -->
+                    <li> TBD </li>
+                </ul>
+            </p>
+                <h3>Prerequisites</h3>
+                <ol>
+                    <li>We will be using one of several toolkits (the primary toolkit for recitations/intruction is PyTorch). The toolkits are largely programmed in Python. You will need to be able to program in at least one of these languages. Alternately, you will be responsible for finding and learning a toolkit that requires programming in a language you are comfortable with, </li>
+                    <li>You will need familiarity with basic calculus (differentiation, chain rule), linear algebra and basic probability. </li>
+                </ol>
+                <h3>Units</h3>
+            <p>This course is worth 12 units.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Course Work</h2>
+            <h3>Grading</h3>
+            <p>Grading will be based on weekly quizzes, homework assignments and a final project.</p>
+            <p>There will be five assignments in all. They will also be due on the same date.</p>
+            <div>
+                <table class="grade-table">
+                    <tr class="grade-table-header"> <td></td> <td><b>Maximum</b></td> </tr>
+                    <tr> <td><b>Quizzes</b></td> <td>13 quizzes (bottom 3 quiz scores will be dropped), total contribution to grade 24%</td></tr>
+                    <tr> <td><b>Assignments</b></td> <td>5 assignments, total contribution to grade 41%</td></tr>
+                    <tr> <td><b>Project</b></td> <td>1 project, total contribution to grade 35%</td></tr>
+                </table>
+            </div>
+            <h4>Late Policy</h4>
+            <p>The late policy will be such that with every day you are late, you would be eligible for a lower grade. For example, if the homework was due on 22nd and you would submit on 23rd then you would be only eligible for a B in the homework. The grades would keep dropping as the days go by.</p>
+
+
+            <h3>Books</h3>
+            <p>The course will not follow a specific book, but will draw from a number of sources. We list relevant books at the end of this page. We will also put up links to relevant reading material for each class. Students are expected to familiarize themselves with the material before the class. The readings will sometimes be arcane and difficult to understand; if so, do not worry, we will present simpler explanations in class.</p>
+            <h3>Discussion board: Piazza</h3>
+            
+            <p>We will use Piazza for discussions. <a href="https://piazza.com/class/jhyyudofj9u4za">Here is the link</a>. Please sign up.</p>
+            <!-- <h3>Wiki page</h3>
+            <p>We have created an experimental wiki explaining the types of neural networks in use today. <a href="https://www.contrib.andrew.cmu.edu/~dalud/deep-learning-wiki/doku.php">Here is the link</a>.</p> -->
+            <p>You can also find a nice catalog of models that are current in the literature <a href="http://www.datasciencecentral.com/profiles/blogs/concise-visual-summary-of-deep-learning-architectures">here</a>. We expect that you will be in a position to interpret, if not fully understand many of the architectures on the wiki and the catalog by the end of the course.</p>
+            <h3>Kaggle</h3>
+            <p><a href="https://www.kaggle.com/">Kaggle</a> is a popular data science platform where visitors compete to produce the best model for learning or analyzing a data set.</p>
+            <p>For assignments you will be submitting your evaluation results to a Kaggle leaderboard.</p>
+            <h3>Academic Integrity</h3>
+            <div>
+                You are expected to comply with the <a href="http://www.cmu.edu/policies/documents/Cheating.html">University Policy on Academic Integrity and Plagiarism</a>.
+                <ul>
+                    <li>You are allowed to talk with / work with other students on homework assignments</li>
+                    <li>You can share ideas but not code, you should submit your own code</li>
+                </ul>
+                Your course instructor reserves the right to determine an appropriate penalty based on the violation of academic dishonesty that occurs. Violations of the university policy can result in severe penalties including failing this course and possible expulsion from Carnegie Mellon University. If you have any questions about this policy and any work you are doing in the course, please feel free to contact your instructor for help.
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Tentative Schedule</h2>
+            <div class="">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Lecture</th>
+                            <th>Start date</th>
+                            <th>Topics</th>
+                            <th>Lecture notes/Slides</th>
+                            <th>Additional readings, if any</th>
+                            <th>Quizzes/Assignments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>August 29</td>
+                            <td>
+                                <ul>
+                                    <li>Introduction to deep learning</li>
+                                    <li>Course logistics</li>
+                                    <li>History and cognitive basis of neural computation.</li>
+                                    <li>The perceptron / multi-layer perceptron</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec1.intro.pdf">slides</a><br>
+                                <a href="https://piazza.com/class/j9xdaodf6p1443?cid=22">video</a> -->
+                            </td>
+                            <td></td>
+                            <td>Quiz 1 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>August 31</td>
+                            <td>
+                                <ul>
+                                    <li>The neural net as a universal approximator</li>
+                                </ul>
+                            </td>
+			                 <td>
+                    <!-- <a href="slides/lec2.universal.pdf">slides</a><br>
+			     <a href="https://www.youtube.com/watch?v=zlnQyxiEGNM&t=2s">video</a> -->
+                        </td>
+                            <td>
+                                <!--
+                                <ul>
+                                    <li><a href="https://pdfs.semanticscholar.org/f22f/6972e66bdd2e769fa64b0df0a13063c0c101.pdf">Hornik, Stinchcombe, and White - Multilayer Feedforward Networks Are Universal Approximators</a></li>
+                                    <li><a href="https://www.researchgate.net/publication/236736771_Shallow_vs_Deep_Sum-Product_Networks">Delalleau, Bengio - Shallow vs. Deep Sum-Product Networks</a></li>
+                                    <li><a href="http://mathsci.kaist.ac.kr/~nipl/mas557/VCD_ANN_3.pdf">Sontag - VC Dimension of Neural Networks</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1708.06019.pdf">Friedland and Krell - A Capacity Scaling Law for Artificial Neural Networks</a></li>
+                                </ul> -->
+                            </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>September 3</td>
+                            <td>
+                                <ul>
+                                    <li>Training a neural network</li>
+                                    <li>Perceptron learning rule</li>
+                                    <li>Empirical Risk Minimization</li>
+                                    <li>Optimization by gradient descent</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec3.learning.pdf">slides</a><br>
+			                     <a href="https://www.youtube.com/watch?v=HyjB2uMZK5k">video</a> -->
+                            </td>
+                            <td>
+                               <!--  <ul>
+                                    <li>Goodfellow Chapter 6</li>
+                                    <li><a href="https://51d52ae2-a-62cb3a1a-s-sites.googlegroups.com/site/handoffnn/neural-network/can-kao-deneural-network-zi-liao/NN-30%E5%B9%B4%E7%99%BC%E5%B1%95.pdf?attachauth=ANoY7cq5XxLKsckxplkqgACkuTcu9kaOYpWQnQbOZypoNMyakHjPutq9fnibNOLeVHrqhwqNZaeGzQRWLIzt1vazuqvNktw4LmRfzBo7kfaY3JFzy2HOwolZiMIBMGzheMv7Hxsl1Lwqqn0YQvGrG7ikyEyrqryLS-un5oBNOR5OPgWIKkQwC-cEiLCzBkBBM9tgcVjndjnNO5ufQXxLhSswn_JnAlhQJZ3yxpdiB_8w9PuVCA25KJkI_fl3xTAjvz088_G2Mzv-5lh9kiRQazb4KwsxbIZkadClLRptlMboq9X2fHclRQ1rHV8jlZt4ue1XI284JLLq&attredirects=0">Widrow, Bernard and Lehr, Michael: 30 Years of Adaptive Neural Networks: Perceptron, Madaline, and Backpropogation</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1305.0208.pdf">Mohri, Mehryar and Rostamizadeh, Afshin (2013). Perceptron Mistake Bounds</a></li>
+                                </ul> -->
+                            </td>
+                            <td>Assignment 1</br>Quiz 2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>September 5</td>
+                            <td>
+                                <ul>
+                                    <li>Back propagation</li>
+                                    <li>Calculus of back propogation</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec4.learning.pdf">slides</a><br>
+			                     <a href="https://www.youtube.com/watch?v=3gjR0KCrwY4">video</a><br>See note about video to the right. -->
+                            </td>
+                            <td>
+				                <!-- <ul>
+                                    <li>
+                                        <a href="https://www.nature.com/articles/323533a0">Rumelhart, Hinton and Williams, 1986</a>
+                                    </li>
+				                        Note: We re-recorded the introduction for the online section after the lecture. To see the slides in order, watch the last few minutes of the video and then watch the video from the beginning. We will edit the video and upload soon.
+				                </ul> -->
+			                 </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>September 10</td>
+                            <td>
+                                <!-- <ul>
+                                    <li>Convergence in neural networks</li>
+                                    <li>Rates of convergence</li>
+                                    <li>Loss surfaces</li>
+                                    <li>Learning rates, and optimization methods</li>
+                                    <li>RMSProp, Adagrad, Momentum</li>
+                                </ul> -->
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <!-- <ul>
+<li><a href="http://nzini.com/lessons/Exposing+The+Hidden+Layer.html">Visualizing Hidden Layers (Optional)</a>
+                                    <li>Goodfellow Chapter 8</li>
+                                    <li><a href="http://paginas.fe.up.pt/~ee02162/dissertacao/RPROP%20paper.pdf">Riedmiller, Matin and Braun, Heinrich (1993). A Direct Adapative Method for Faster Backpropogation Learning: The RPROP Algorithm</a></li>
+                                    <li><a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=2799&context=compsci">Fahlman, Scott (1988). An empirical study of learning speed in backpropagation networks</a></li>
+                                </ul> --></td>
+                            <td>Quiz 3</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>September 12</td>
+                            <td>
+                                <ul>
+                                    <li>Stochastic gradient descent</li>
+                                    <li>Acceleration</li>
+                                    <li>Overfitting and regularization</li>
+                                    <li>Tricks of the trade:
+                                        <ul>
+                                            <li>Choosing a divergence (loss) function</li>
+                                            <li>Batch normalization</li>
+                                            <li>Dropout</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><!-- <a href="slides/lec6.stochastic_gradient.pdf">slides</a><br>
+				<a href="https://www.youtube.com/watch?v=O6JUY0_VZIA&list=PLp-0K3kfddPwAs6VPBN5AwNmR23_QY41R">video </a><br> -->
+			    </td>
+                            <td>
+                                <!-- <ul>
+                                    <li>Goodfellow Chapter 7</li>
+                                    <li><a href="https://arxiv.org/pdf/1607.01981.pdf">Botev, Aleksandar, Lever, Guy and Barber, David (2016). Nesterov's Accelerated Gradient and Momentum as approximations to Regularised Update Descent</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1412.6980.pdf">Kingma, Diederik and Ba, Jimmy Lei (2015). ADAM: A Method for Stochastic Optimization</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1502.03167.pdf">Ioffe, Sergey and Szegedy, Christian (2015). Batch Normalization: Accelerating Deep Network Training By Reducing Internal Covariate Shift</a></li>
+                                    <li><a href="https://arxiv.org/abs/1702.03275">Ioffe, Sergey (2017). Batch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models</a></li>
+                                </ul> -->
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>September 17</td>
+                            <td>TBA</td>
+                            <td>
+                                <!-- <a href="slides/lec7.cascor.pdf">slides</a> -->
+                            </td>
+                            <td></td>
+                            <td>Quiz 4 </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>September 19</td>
+                            <td>
+                                <ul>
+                                    <li>Optimization continued</li>
+                                </ul>
+                            </td>
+                            <td>
+                               <!--  <a href="slides/lec8.stochastic_gradient.pdf">slides</a><br>
+				<a href="https://www.youtube.com/watch?v=NmAVlL-yJLI">video</a> -->
+			                 </td>
+                            <td>
+                                <!-- <Goodfellow Chapter 9> -->
+                            </td>
+                            <td>
+                                <!-- <font color="red">Assignment 1 due </font><br> Assignment 2 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>September 24</td>
+                            <td>
+                                <ul>
+                                    <li>Convolutional Neural Networks (CNNs)</li>
+                                    <li>Weights as templates</li>
+                                    <li>Translation invariance</li>
+                                    <li>Training with shared parameters</li>
+                                    <li>Arriving at the convlutional model</li>
+                                </ul>
+                            </td>
+                            <td>
+                               <!--  <a href="slides/lec9.cnn.pdf">slides</a><br>
+				<a href="https://www.youtube.com/watch?v=WUKqug6qnBc">video</a> -->
+			                 </td>
+                            <td></td>
+                            <td>Quiz 5</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>September 26</td>
+                            <td>
+                                <ul>
+                                    <li>Models of vision</li>
+                                    <li>Neocognitron</li>
+                                    <li>Mathematical details of CNNs</li>
+                                    <li>Alexnet, Inception, VGG</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec10.CNN.pdf">slides</a><br>
+                <a href="https://www.youtube.com/watch?v=LEw3ADkod2k">video</a> -->
+                            </td>
+                            <td>
+                                <!--Goodfellow Chapter 10 -->
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>October 1</td>
+                            <td>
+                                <ul>
+                                    <li>Recurrent Neural Networks (RNNs)</li>
+                                    <li>Modeling series</li>
+                                    <li>Back propogation through time</li>
+                                    <li>Bidirectional RNNs</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec11.recurrent.pdf">slides</a><br>
+                <a href="https://www.youtube.com/watch?v=6-xgyqKHKjc">video</a> -->
+                            </td>
+                            <td></td>
+                            <td>Quiz 6</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>October 3</td>
+                            <td>
+                                <ul>
+                                    <li>Stability</li>
+                                    <li>Exploding/vanishing gradients</li>
+                                    <li>Long Short-Term Memory Units (LSTMs) and variants</li>
+                                    <li>Resnets</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec12.recurrent.pdf">slides</a><br>
+                <a href="https://www.youtube.com/watch?v=0xHxZ5mI3_Y">video</a> -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>October 8</td>
+                            <td>
+                                <ul>
+                                    <li>Loss functions for recurrent networks</li>
+                                    <li>Sequence prediction</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec13.recurrent.pdf">slides</a><br>
+                <a href="https://www.youtube.com/watch?v=VdgLzqrv-II">video</a> -->
+                            </td>
+                            <td></td>
+                            <td>
+                                <font color="red">Assignment 2 due </font><br> Assignment 3<br>
+                            Quiz 7</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>October 10</td>
+                            <td>
+                                <ul>
+                                    <li>Sequence To Sequence Methods</li>
+                                    <li>Connectionist Temporal Classification (CTC)</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec14.recurrent.pdf">slides</a><br>
+                <a href="https://www.youtube.com/watch?v=c86gfVGcvh4">video</a> -->
+                            </td>
+                            <td>
+                                <!--ul>
+                                    <li>For PCA, Factor Analysis, Probabilistic PCA: Bishop Ch. 12</li>
+                                    <li>For Expectation Maximization / Variational Inference: Bishop Ch. 9.4, Ch. 10</li>
+                                </ul-->
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>October 15</td>
+                            <td>
+                                <ul>
+                                    <li>What to networks represent</li>
+                                    <li>Autoencoders and dimensionality reduction</li>
+                                    <li>Learning representations</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec15.representations.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=754vWvIimPo">video</a> -->
+                            </td>
+                            <td>
+                                <!--ul>
+                                    <li><a href="https://arxiv.org/abs/1312.6114">Kingma, Diederik and Welling, Max (2014). Auto-Encoding Variational Bayes</a></li>
+                                    <li><a href="https://arxiv.org/abs/1312.6114">Kingma, Diederik and colleagues (2017). Improving Variational Inference with Inverse Autoregressive Flow</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1702.08658.pdf">Zhao, Shengjia and colleagues (2017). Towards a Deeper Understanding of Variational Autoencoding Models</a></li>
+                                </ul-->
+                            </td>
+                            <td>Quiz 8</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>October 17</td>
+                            <td>
+                                <ul>
+                                    <li>Sequence-to-sequence models, Attention models, examples from speech and language
+                                    </li>
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>October 22</td>
+                            <td>Variational Autoencoders (VAEs)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>October 24</td>
+                            <td>
+                                <ul>
+                                    <li>Generative Adversarial Networks (GANs) Part 1</li>
+                                </ul>
+                            </td>
+                            <td>
+                               <!--  <a href="recitations/lec14-p2.attention.pdf">slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=oiNFCbD_4Tk">video</a> -->
+                            </td>
+                            <td></td>
+                            <td><font color="red">Assignment 3 due </font><br>
+                            Quiz 9 <br>
+                            Assignments 4 and 5</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>October 31</td>
+                            <td>
+                                <ul>
+                                    <li>Generative Adversarial Networks (GANs) Part 2</li>
+                                </ul>
+                            </td>
+                            <td>
+                               <!--  <a href="slides/lec18.GANs.part2.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=Yg36VeGHfrA">video</a> -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>November 5</td>
+                            <td>
+                                <ul>
+                                    <li>TBA</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec19.NeuronCap.GeraldFriedland.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=D2FK6-Pgtxc&list=PLp-0K3kfddPzwUvp5-SGfGGAJ0_Zxzldt">video</a> -->
+                            </td>
+                            <td></td>
+                            <td>Quiz 10</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>November 7</td>
+                            <td>
+                                <ul>
+                                    <li>Hopfield Networks</li>
+                                    <li>Energy functions</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec20.hopfield.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=yl8znINLXdg">video</a> -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>November 12</td>
+                            <td>
+                                <ul>
+                                    <li>Training Hopfield Networks</li>
+                                    <li>Stochastic Hopfield Networks</li>
+                                </ul>
+                            </td>
+                            <td>
+                              <!--   <a href="slides/lec21.hopfield.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=LtGdn9h5OSQ">video</a> -->
+                            </td>
+                            <td></td>
+                            <td>Quiz 11</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>November 14</td>
+                            <td>
+                                <ul>
+                                    <li>Restricted Boltzman Machines</li>
+                                    <li>Deep Boltzman Machines</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="https://www.youtube.com/watch?v=it_PXVIMyWg">video</a> -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>November 19</td>
+                            <td>
+                                <ul>
+                                    <li>Reinforcement Learning 1</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="https://www.youtube.com/watch?v=YmARxEX-4PY">video</a> -->
+                            </td>
+                            <td></td>
+                            <td>Quiz 12</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>November 21</td>
+                            <td>
+                                <ul>
+                                    <li>Thanksgiving Break - No Classes</li>
+                                </ul>
+                                
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>November 26</td>
+                            <td>
+                                <ul>
+                                    <li>Reinforcement Learning 2</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                       <!--  <tr>
+                            <td>25</td>
+                            <td>November 26</td>
+                            <td>
+                                <ul>
+                                    <li>Reinforcement Learning 3</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>Quiz 13</td>
+                        </tr> -->
+                        <tr>
+                            <td>26</td>
+                            <td>November 28</td>
+                            <td><ul>
+                                    <li>Reinforcement Learning 3</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td><font color="red">Assignments 4 and 5 due </font></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>December 3</td>
+                            <td>
+                                <ul>
+                                    <li>Q Learning</li>
+                                    <li>Deep Q Learning</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>December 5</td>
+                            <td>
+                                <ul>
+                                    <li>Newer models and trends</li>
+                                    <li>Review</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <h2>Tentative Schedule of Recitations (Note: dates may shift)</h2>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Recitation</th>
+                            <th>Start date</th>
+                            <th>Topics</th>
+			    <th>Lecture notes/Slides</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>August 27</td>
+                            <td>Amazon Web Services (AWS)</td>
+			                 <td>
+                    <!-- <a href="recitations/rec1.aws.pdf">slides</a><br><a href="recitations/rec1.aws.mp4">video</a><br>
+<a href="http://deeplearning.cs.cmu.edu/recitations/rec1.aws.mp4">video</a> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>September 7</td>
+                            <td>Your first Deep Learning Code</td>
+			    <td>
+                    <!-- <a href="recitations/rec2.basics.pdf">slides</a><br><a href="https://www.youtube.com/watch?v=7UWXJaV-jUQ">video</a> -->
+                </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>September 14</td>
+                            <td>Efficient Deep Learning/Optimization Methods</td>
+			    <td>
+                    <!-- <a href="recitations/rec3.optimization.pdf">slides</a><br>
+				<a href="https://www.youtube.com/watch?v=_MajYORh1I0">video</a> -->
+			    </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>September 21</td>
+                            <td>Convolutional Neural Networks</td>
+			                <td>
+                                <!-- <a href="recitations/rec4.cnn.pptx">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=nKmeFKEEcwI">video</a> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>September 28</td>
+                            <td>Debugging and Visualization</td>
+			                <td>
+                                <!-- <a href="recitations/rec5.rnn.pdf">slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=vYfIpfGL0ZU">video</a> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>October 5</td>
+                            <td>Basics of Recurrent Neural Networks</td>
+                            <td>
+                                <!-- <a href="recitations/rec6.seq2seqlossesctc.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=e0ia-mN-7Kk">video</a> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>October 12</td>
+                            <td>Recurrent networks 2: Loss functions, CTC</td>
+                            <td>
+                                <!-- <a href="recitations/rec7.visualization.pdf">slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=yzBfOqzfnUg">video</a> -->
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>October 19</td>
+                            <td>Attention</td>
+                            <td>
+                                <!-- <a href="recitations/rec7.visualization.pdf">slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=yzBfOqzfnUg">video</a> -->
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>October 26</td>
+                            <td>Research in Deep Learning</td>
+                            <td>
+                                <!-- <a href="recitations/rec8.attention.pdf">slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=eAWdqbNFRPA">video</a> -->
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>November 2</td>
+                            <td>Variational autoencoders</td>
+			                 <td>
+                               <!--  <a href="recitations/rec9.vae.pdf">slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=9RT_t_9RCTs">video</a> -->
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>November 9</td>
+                            <td>GANs</td>
+			    <td>
+                    <!-- <a href="https://www.youtube.com/watch?v=YLHYlJd17p4&list=PLp-0K3kfddPzmXfMlseUbjJySOUYtNhVX">video</a> -->
+                </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>November 16</td>
+                            <td>Reinforcement Learning</td>
+			    <td>
+                    <!-- <a href = "https://www.youtube.com/watch?v=ULhYUewFGKY&list=PLp-0K3kfddPzi2tb2PwoTmii8lwBmOqg7">video</a> -->
+                </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+
+                            <td>November 30</td>
+                            <td>Hopfield Nets, Boltzmann machines, RBMs</td>
+			    <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <!-- <h3><a href="slides/ProjectIdeas.pptx">Some ideas for projects</a></h3> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Documentation and Tools</h2>
+            <h3>Textbooks</h3>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./img/Goodfellow.jpg" alt="Deep Learning" /></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="http://deeplearning.cs.cmu.edu/data/DeepLearningBook.zip"><b>Deep Learning</b></a></span>
+                    <span class="textbook-info-item">By Ian Goodfellow, Yoshua Bengio, Aaron Courville</span>
+                    <span class="textbook-info-item"><i>Online book, 2017</i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./img/Nielsen.png" alt="Neural Networks and Deep Learning" /></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="http://neuralnetworksanddeeplearning.com/"><b>Neural Networks and Deep Learning</b></a></span>
+                    <span class="textbook-info-item">By Michael Nielsen</span>
+                    <span class="textbook-info-item"><i>Online book, 2016</i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./img/Brownlee.png" alt="Deep Learning with Python"/></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="https://machinelearningmastery.com/deep-learning-with-python/"><b>Deep Learning with Python</b></a></span>
+                    <span class="textbook-info-item">By J. Brownlee</span>
+                    <span class="textbook-info-item"><i></i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./img/Lewis.jpg" alt="Deep Learning Step by Step with Python"/></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="https://www.amazon.com/Deep-Learning-Step-Python-Introduction/dp/1535410264"><b>Deep Learning Step by Step with Python: A Very Gentle Introduction to Deep Neural Networks for Practical Data Science</b></a></span>
+                    <span class="textbook-info-item">By N. D. Lewis</span>
+                    <span class="textbook-info-item"><i></i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./img/Rumelhart.jpg" alt="Parallel Distributed Processing"/></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="https://mitpress.mit.edu/books/parallel-distributed-processing"><b>Parallel Distributed Processing</b></a></span>
+                    <span class="textbook-info-item">By Rumelhart and McClelland</span>
+                    <span class="textbook-info-item"><i>Out of print, 1986</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="row">
+</div>
+</div>
+</body>
+</html>
