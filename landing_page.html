@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 
-    <title>11-785 Deep Learning</title>
+    <title>11-661/11-761 Language and Statistics</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="http://www.qatar.cmu.edu/cs/10601/img/favicon.ico">
@@ -163,7 +162,7 @@
                 <img id="logo" src="./img/brain.png">
             </div-->
             <div class="title-col vcenter" style="color:#A80000;font-weight:bold;text-align:center;width:100%">
-                <div class="title"><b>11-485/785</b> Introduction to Deep Learning</div>
+                <div class="title"><b>11-661/761</b> Language and Statistics</div>
                 <div class="subtitle"><i>Fall 2018</i></div>
             </div>
         </div>
@@ -172,13 +171,16 @@
     <div class=" container">
         <div class="row">
             <p style="margin-top:75px;">
-                &ldquo;Deep Learning&rdquo; systems, typified by deep neural networks, are increasingly taking over all AI tasks, ranging from language understanding, and speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is fast changing from an esoteric desirable to a mandatory prerequisite in many advanced academic settings, and a large advantage in the industrial job market.
+                Internet search, speech recognition, machine translation, question answering, information retrieval, biological sequence analysis -- are all at the forefront of this century’s information revolution. In addition to their use of machine learning, these technologies rely heavily on classic statistical estimation techniques. Yet most CS and engineering undergraduate programs do not prepare students in this area beyond an introductory probability & statistics course. This course is designed to address this gap.
             </p>
-            <p> In this course we will learn about the basics of deep neural networks, and their applications to various AI tasks. By the end of the course, it is expected that students will have significant familiarity with the subject, and be able to apply Deep Learning to a variety of tasks. They will also be positioned to understand much of the current literature on the topic and extend their knowledge through further study.</p>
-            <h3>Course description from student point of view</h3>
-            <p>The course is well rounded in terms of concepts. It helps us understand the fundamentals of Deep Learning. The course starts off gradually with MLPs and it progresses into the more complicated concepts such as attention and sequence-to-sequence models. We get a complete hands on with PyTorch which is very important to implement Deep Learning models. As a student, you will learn the tools required for building Deep Learning models. The homeworks usually have 2 components which is Autolab and Kaggle. The Kaggle components allow us to explore multiple architectures and understand how to fine-tune and continuously improve models. The task for all the homeworks were similar and it was interesting to learn how the same task can be solved using multiple Deep Learning approaches. Overall, at the end of this course you will be confident enough to build and tune Deep Learning models.</p>
+            <p> The goal of "Language and Statistics" is to ground the data-driven techniques used in language technologies in sound statistical methodology. We start by formulating various language technology problems in both an information theoretic framework (the source-channel paradigm) and a Bayesian framework (the Bayes classifier). We then discuss the statistical properties of words, sentences, documents and whole languages, and the various computational formalisms used to represent language. These discussions naturally lead to specific concepts in statistical estimation.</p>
+            
+            <p>Topics include: Zipf's distribution and type-token curves; point estimators, Maximum Likelihood estimation, bias and variance, sparseness, smoothing and clustering; interpolation, shrinkage, and backoff; entropy, cross entropy and mutual information; decision tree models applied to language; latent variable models and the EM algorithm; hidden Markov models; exponential models and the maximum entropy principle; semantic modeling and dimensionality reduction; probabilistic context-free grammars and syntactic language models.</p>
 
-            <h4><a href="feedback.html" target="_blank">What students say about the previous edition of the course</a></h4>
+            <p>“Language and Statistics” is designed for LTI and other SCS graduate students, but others are also welcome. CS undergraduate upperclassmen who have taken it have done well, although they found it challenging.</p>
+
+            <p>The Master-level version of this course (11-661) does not require the course project.</p>
+
             <p><b style="color:#A80000;">Instructor:</b> Bhiksha Raj</p>
             <ul style="margin-top:-10px;">
                 <li>bhiksha@cs.cmu.edu</li>
@@ -186,25 +188,14 @@
             <p>
                 <b style="color:#A80000;">TAs:</b>
                 <ul>
-                    <li> Ryan Brigden (rbrigden@andrew.cmu.edu) </li>
-                    <li> Raphael Franck Olivier (rolivier@andrew.cmu.edu) </li>
-                    <li> Sai Nihar Tadichetty (ntadiche@andrew.cmu.edu) </li>
-                    <li> Sai Abishek Bhaskar (sabhaska@andrew.cmu.edu) </li>
-                    <li> Soham Ghosh (sohamg@andrew.cmu.edu) </li>
-                    <li> Madhura Das (madhurad@andrew.cmu.edu) </li>
-                    <li> Ipsita Prakash (iprakash@andrew.cmu.edu) </li>
-                    <li> Dhruv Shah (ddshah@andrew.cmu.edu) </li>
-                    <li> Shaden Shaar (sshaar@andrew.cmu.edu) </li>
-                    <li> Omar Khattab for Doha (okhattab@cmu.edu) </li>
-                    <li> Nebiyou Yismaw for Kigali (nyismaw@andrew.cmu.edu) </li>
-                    <li> David Zhang (davidz1@andrew.cmu.edu) </li>
-                    <li> Zeqiang Huang (zqeiangh@andrew.cmu.edu)</li>
-                    <li> Pooja Chitkara (pchitkara@andrew.cmu.edu) </li>
+                    <li> Pramati Kalwad (pkalwad@andrew.cmu.edu) </li>
+                    <li> Ashwin Naresh Kumar (anareshk@andrew.cmu.edu) </li>
+                    <li> Zhilin Yang (zhiliny@andrew.cmu.edu) </li>
                 </ul>
                 <!-- <p style="font-size: 12px;">* contingent on registration</p> -->
-            <p><b style="color:#A80000;">Lecture:</b> Monday and Wednesday, 9.00am-10.20am</p>
-            <p><b style="color:#A80000;">Location:</b> Gates-Hillman Complex GHC 4102</p>
-            <p><b style="color:#A80000;">Recitation:</b> Friday, 9.00am-10.20am, <b>Location: </b> TBD</p>
+            <p><b style="color:#A80000;">Lecture:</b> Monday and Wednesday, 12:00 noon - 1.20pm</p>
+            <p><b style="color:#A80000;">Location:</b> Gates-Hillman Complex GHC 4307</p>
+            <p><b style="color:#A80000;">Recitation:</b> TBD</p>
             <p>
                 <b style="color:#A80000;">Office hours:</b>
                 <ul>
@@ -216,12 +207,9 @@
                     <li> TBD </li>
                 </ul>
             </p>
-                <h3>Prerequisites</h3>
-                <ol>
-                    <li>We will be using one of several toolkits (the primary toolkit for recitations/intruction is PyTorch). The toolkits are largely programmed in Python. You will need to be able to program in at least one of these languages. Alternately, you will be responsible for finding and learning a toolkit that requires programming in a language you are comfortable with, </li>
-                    <li>You will need familiarity with basic calculus (differentiation, chain rule), linear algebra and basic probability. </li>
-                </ol>
-                <h3>Units</h3>
+            <h3>Prerequisites</h3>
+                <p>Strong quantitative aptitude. Familiarity and comfort with basic undergraduate-level probability. Some programming skill.</p>
+            <h3>Units</h3>
             <p>This course is worth 12 units.</p>
         </div>
     </div>
@@ -234,11 +222,15 @@
             <div>
                 <table class="grade-table">
                     <tr class="grade-table-header"> <td></td> <td><b>Maximum</b></td> </tr>
-                    <tr> <td><b>Quizzes</b></td> <td>13 quizzes (bottom 3 quiz scores will be dropped), total contribution to grade 24%</td></tr>
-                    <tr> <td><b>Assignments</b></td> <td>5 assignments, total contribution to grade 41%</td></tr>
-                    <tr> <td><b>Project</b></td> <td>1 project, total contribution to grade 35%</td></tr>
+                    <tr> <td><b>Exam</b></td> <td>1 exam, total contribution to grade 35%</td></tr>
+                    <tr> <td><b>Assignments</b></td> <td>7 assignments, total contribution to grade 35%</td></tr>
+                    <tr> <td><b>Final Project</b></td> <td>1 project, total contribution to grade 35% (only for those taking 11-761; otherwise, renormalize)</td></tr>
                 </table>
             </div>
+            <ul>
+                <li>Top “Endorsed Answer” Answerers on Piazza may get bonus points.</li>
+                <li>Class participation can also improve your grade.</li>
+            </ul>
             <h4>Late Policy</h4>
             <p>The late policy will be such that with every day you are late, you would be eligible for a lower grade. For example, if the homework was due on 22nd and you would submit on 23rd then you would be only eligible for a B in the homework. The grades would keep dropping as the days go by.</p>
 
@@ -247,13 +239,10 @@
             <p>The course will not follow a specific book, but will draw from a number of sources. We list relevant books at the end of this page. We will also put up links to relevant reading material for each class. Students are expected to familiarize themselves with the material before the class. The readings will sometimes be arcane and difficult to understand; if so, do not worry, we will present simpler explanations in class.</p>
             <h3>Discussion board: Piazza</h3>
             
-            <p>We will use Piazza for discussions. <a href="https://piazza.com/class/jhyyudofj9u4za">Here is the link</a>. Please sign up.</p>
+            <p>We will use Piazza for discussions. <a href="#">Here is the link</a>. Please sign up.</p>
             <!-- <h3>Wiki page</h3>
             <p>We have created an experimental wiki explaining the types of neural networks in use today. <a href="https://www.contrib.andrew.cmu.edu/~dalud/deep-learning-wiki/doku.php">Here is the link</a>.</p> -->
-            <p>You can also find a nice catalog of models that are current in the literature <a href="http://www.datasciencecentral.com/profiles/blogs/concise-visual-summary-of-deep-learning-architectures">here</a>. We expect that you will be in a position to interpret, if not fully understand many of the architectures on the wiki and the catalog by the end of the course.</p>
-            <h3>Kaggle</h3>
-            <p><a href="https://www.kaggle.com/">Kaggle</a> is a popular data science platform where visitors compete to produce the best model for learning or analyzing a data set.</p>
-            <p>For assignments you will be submitting your evaluation results to a Kaggle leaderboard.</p>
+            
             <h3>Academic Integrity</h3>
             <div>
                 You are expected to comply with the <a href="http://www.cmu.edu/policies/documents/Cheating.html">University Policy on Academic Integrity and Plagiarism</a>.
