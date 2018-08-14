@@ -216,9 +216,6 @@
     <div class="container">
         <div class="row">
             <h2>Course Work</h2>
-            <h3>Grading</h3>
-            <p>Grading will be based on weekly quizzes, homework assignments and a final project.</p>
-            <p>There will be five assignments in all. They will also be due on the same date.</p>
             <div>
                 <table class="grade-table">
                     <tr class="grade-table-header"> <td></td> <td><b>Maximum</b></td> </tr>
@@ -232,7 +229,8 @@
                 <li>Class participation can also improve your grade.</li>
             </ul>
             <h4>Late Policy</h4>
-            <p>The late policy will be such that with every day you are late, you would be eligible for a lower grade. For example, if the homework was due on 22nd and you would submit on 23rd then you would be only eligible for a B in the homework. The grades would keep dropping as the days go by.</p>
+            <p> <b>Extensions: </b>If you have an unavoidable conflict that prevents you from completing an assignment on time (such as travel to a conference or a medical emergency), please send an email to the TA in charge of that assignment, as soon as you become aware of the problem, briefly stating the circumstances and how much more time you need.  The TA-in-charge is authorized to grant an extension as long as you requested it promptly.  Do not send extension requests to the Instructor, nor to the other TAs.</p>
+            <p>Assignments turned late without prior approval will incur a 25% penalty per 24-hour period or any part thereof.</p>
 
 
             <h3>Books</h3>
@@ -261,656 +259,382 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>Lecture</th>
-                            <th>Start date</th>
+                            <th>Lectures</th>
+                            <th>Dates</th>
                             <th>Topics</th>
+                            <th>Required Reading (due BEFORE class)</th>
                             <th>Lecture notes/Slides</th>
                             <th>Additional readings, if any</th>
-                            <th>Quizzes/Assignments</th>
+                            <th>Assignments</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>August 29</td>
+                            <td>1,2</td>
+                            <td>August 27,29</td>
                             <td>
                                 <ul>
-                                    <li>Introduction to deep learning</li>
-                                    <li>Course logistics</li>
-                                    <li>History and cognitive basis of neural computation.</li>
-                                    <li>The perceptron / multi-layer perceptron</li>
+                                    <li>Course Overview</li>
+                                    <li>Statistical Language Modeling</li>
+                                    <li>Computational Linguistics</li>
+                                    <li>Statistical Decision Making</li>
+                                    <li>Source-Channel Paradigm</li>
                                 </ul>
                             </td>
+                            <td>[MS] 1.1 - 1.3, 2.1</td>
                             <td>
-                                <!-- <a href="slides/lec1.intro.pdf">slides</a><br>
-                                <a href="https://piazza.com/class/j9xdaodf6p1443?cid=22">video</a> -->
+                                <!-- LN -->
                             </td>
+                            <td><a href="http://www.cs.cmu.edu/~roni/11761/PreviousYearsHandouts/intro.pdf">Historical overview by Lafferty</a></td>
                             <td></td>
-                            <td>Quiz 1 </td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>August 31</td>
+                            <td>3</td>
+                            <td>September 5</td>
                             <td>
                                 <ul>
-                                    <li>The neural net as a universal approximator</li>
+                                    <li>All About Words: Types, Tokens and Vocabularies</li> 
+                                    <li>Type-Token Data</li>
                                 </ul>
                             </td>
+                            <td>[MS] 1.4</td>
 			                 <td>
-                    <!-- <a href="slides/lec2.universal.pdf">slides</a><br>
-			     <a href="https://www.youtube.com/watch?v=zlnQyxiEGNM&t=2s">video</a> -->
+                    <!-- LN -->
                         </td>
                             <td>
-                                <!--
-                                <ul>
-                                    <li><a href="https://pdfs.semanticscholar.org/f22f/6972e66bdd2e769fa64b0df0a13063c0c101.pdf">Hornik, Stinchcombe, and White - Multilayer Feedforward Networks Are Universal Approximators</a></li>
-                                    <li><a href="https://www.researchgate.net/publication/236736771_Shallow_vs_Deep_Sum-Product_Networks">Delalleau, Bengio - Shallow vs. Deep Sum-Product Networks</a></li>
-                                    <li><a href="http://mathsci.kaist.ac.kr/~nipl/mas557/VCD_ANN_3.pdf">Sontag - VC Dimension of Neural Networks</a></li>
-                                    <li><a href="https://arxiv.org/pdf/1708.06019.pdf">Friedland and Krell - A Capacity Scaling Law for Artificial Neural Networks</a></li>
-                                </ul> -->
+                                [BCW] ch. 4, <a href="https://www.youtube.com/watch?v=fCn8zs912OE">Zipf's Law</a>
                             </td>
                             <td> </td>
                         </tr>
                         <tr>
-                            <td>3</td>
+                            <td>4,5</td>
                             <td>September 3</td>
                             <td>
                                 <ul>
-                                    <li>Training a neural network</li>
-                                    <li>Perceptron learning rule</li>
-                                    <li>Empirical Risk Minimization</li>
-                                    <li>Optimization by gradient descent</li>
+                                    <li>Unigrams: Statistical Estimation</li>
+                                    <li>Maximum Likelihood Estimates</li>
                                 </ul>
                             </td>
+                            <td>[MS] 6.2.1</td>
                             <td>
-                                <!-- <a href="slides/lec3.learning.pdf">slides</a><br>
-			                     <a href="https://www.youtube.com/watch?v=HyjB2uMZK5k">video</a> -->
+                                <!-- LN -->
                             </td>
                             <td>
-                               <!--  <ul>
-                                    <li>Goodfellow Chapter 6</li>
-                                    <li><a href="https://51d52ae2-a-62cb3a1a-s-sites.googlegroups.com/site/handoffnn/neural-network/can-kao-deneural-network-zi-liao/NN-30%E5%B9%B4%E7%99%BC%E5%B1%95.pdf?attachauth=ANoY7cq5XxLKsckxplkqgACkuTcu9kaOYpWQnQbOZypoNMyakHjPutq9fnibNOLeVHrqhwqNZaeGzQRWLIzt1vazuqvNktw4LmRfzBo7kfaY3JFzy2HOwolZiMIBMGzheMv7Hxsl1Lwqqn0YQvGrG7ikyEyrqryLS-un5oBNOR5OPgWIKkQwC-cEiLCzBkBBM9tgcVjndjnNO5ufQXxLhSswn_JnAlhQJZ3yxpdiB_8w9PuVCA25KJkI_fl3xTAjvz088_G2Mzv-5lh9kiRQazb4KwsxbIZkadClLRptlMboq9X2fHclRQ1rHV8jlZt4ue1XI284JLLq&attredirects=0">Widrow, Bernard and Lehr, Michael: 30 Years of Adaptive Neural Networks: Perceptron, Madaline, and Backpropogation</a></li>
-                                    <li><a href="https://arxiv.org/pdf/1305.0208.pdf">Mohri, Mehryar and Rostamizadeh, Afshin (2013). Perceptron Mistake Bounds</a></li>
-                                </ul> -->
+                               [mD] ch. 6, esp. 6.5
                             </td>
-                            <td>Assignment 1</br>Quiz 2</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>4</td>
+                            <td>6,7</td>
                             <td>September 5</td>
                             <td>
                                 <ul>
-                                    <li>Back propagation</li>
-                                    <li>Calculus of back propogation</li>
+                                    <li>Sparseness</li>
+                                    <li>Smoothing</li>
                                 </ul>
                             </td>
+                            <td>[MS] 6.2.2</td>
                             <td>
-                                <!-- <a href="slides/lec4.learning.pdf">slides</a><br>
-			                     <a href="https://www.youtube.com/watch?v=3gjR0KCrwY4">video</a><br>See note about video to the right. -->
+                                <!-- LN -->
                             </td>
                             <td>
-				                <!-- <ul>
-                                    <li>
-                                        <a href="https://www.nature.com/articles/323533a0">Rumelhart, Hinton and Williams, 1986</a>
-                                    </li>
-				                        Note: We re-recorded the introduction for the online section after the lecture. To see the slides in order, watch the last few minutes of the video and then watch the video from the beginning. We will edit the video and upload soon.
-				                </ul> -->
-			                 </td>
+                                <a href="http://www.ling.upenn.edu/courses/cogs502/GoodTuring1953.pdf">Good-Turing</a>
+                            </td>
+                            
                             <td></td>
                         </tr>
                         <tr>
-                            <td>5</td>
+                            <td>8,9</td>
                             <td>September 10</td>
                             <td>
-                                <!-- <ul>
-                                    <li>Convergence in neural networks</li>
-                                    <li>Rates of convergence</li>
-                                    <li>Loss surfaces</li>
-                                    <li>Learning rates, and optimization methods</li>
-                                    <li>RMSProp, Adagrad, Momentum</li>
-                                </ul> -->
+                                <ul>
+                                    <li>N-grams: Linear Interpolation</li>
+                                    <li>Backoff</li>
+                                </ul>
                             </td>
                             <td>
+                                <ul>
+                                    <li>[MS] 6.1, 6.3 </li>
+                                    <li><a href="http://ieeexplore.ieee.org/iel6/29/26208/01165125.pdf?isnumber=&arnumber=1165125">[sK]</a></li>
+                                </ul>
                             </td>
                             <td>
-                                <!-- <ul>
-<li><a href="http://nzini.com/lessons/Exposing+The+Hidden+Layer.html">Visualizing Hidden Layers (Optional)</a>
-                                    <li>Goodfellow Chapter 8</li>
-                                    <li><a href="http://paginas.fe.up.pt/~ee02162/dissertacao/RPROP%20paper.pdf">Riedmiller, Matin and Braun, Heinrich (1993). A Direct Adapative Method for Faster Backpropogation Learning: The RPROP Algorithm</a></li>
-                                    <li><a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=2799&context=compsci">Fahlman, Scott (1988). An empirical study of learning speed in backpropagation networks</a></li>
-                                </ul> --></td>
-                            <td>Quiz 3</td>
+                                <!-- LN -->
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/~roni/11761/Presentations/h015a-techreport.pdf">Chen & Goodman 98</a>(pp. 1-21)
+                            </td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>6</td>
+                            <td>10,11,12,13</td>
                             <td>September 12</td>
                             <td>
-                                <ul>
-                                    <li>Stochastic gradient descent</li>
-                                    <li>Acceleration</li>
-                                    <li>Overfitting and regularization</li>
-                                    <li>Tricks of the trade:
-                                        <ul>
-                                            <li>Choosing a divergence (loss) function</li>
-                                            <li>Batch normalization</li>
-                                            <li>Dropout</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </td>
-                            <td><!-- <a href="slides/lec6.stochastic_gradient.pdf">slides</a><br>
-				<a href="https://www.youtube.com/watch?v=O6JUY0_VZIA&list=PLp-0K3kfddPwAs6VPBN5AwNmR23_QY41R">video </a><br> -->
-			    </td>
-                            <td>
-                                <!-- <ul>
-                                    <li>Goodfellow Chapter 7</li>
-                                    <li><a href="https://arxiv.org/pdf/1607.01981.pdf">Botev, Aleksandar, Lever, Guy and Barber, David (2016). Nesterov's Accelerated Gradient and Momentum as approximations to Regularised Update Descent</a></li>
-                                    <li><a href="https://arxiv.org/pdf/1412.6980.pdf">Kingma, Diederik and Ba, Jimmy Lei (2015). ADAM: A Method for Stochastic Optimization</a></li>
-                                    <li><a href="https://arxiv.org/pdf/1502.03167.pdf">Ioffe, Sergey and Szegedy, Christian (2015). Batch Normalization: Accelerating Deep Network Training By Reducing Internal Covariate Shift</a></li>
-                                    <li><a href="https://arxiv.org/abs/1702.03275">Ioffe, Sergey (2017). Batch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models</a></li>
-                                </ul> -->
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>September 17</td>
-                            <td>TBA</td>
-                            <td>
-                                <!-- <a href="slides/lec7.cascor.pdf">slides</a> -->
-                            </td>
-                            <td></td>
-                            <td>Quiz 4 </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>September 19</td>
-                            <td>
-                                <ul>
-                                    <li>Optimization continued</li>
+                                <ul>Measuring Success:
+                                    <li>Information Theory</li> 
+                                    <li>Entropy</li> 
+                                    <li>Perplexity</li> 
                                 </ul>
                             </td>
                             <td>
-                               <!--  <a href="slides/lec8.stochastic_gradient.pdf">slides</a><br>
-				<a href="https://www.youtube.com/watch?v=NmAVlL-yJLI">video</a> -->
-			                 </td>
-                            <td>
-                                <!-- <Goodfellow Chapter 9> -->
+			                     [MS] 2.2
                             </td>
                             <td>
-                                <!-- <font color="red">Assignment 1 due </font><br> Assignment 2 -->
+                            <!-- LN -->
                             </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>September 24</td>
                             <td>
                                 <ul>
-                                    <li>Convolutional Neural Networks (CNNs)</li>
-                                    <li>Weights as templates</li>
-                                    <li>Translation invariance</li>
-                                    <li>Training with shared parameters</li>
-                                    <li>Arriving at the convlutional model</li>
+                                    <li><a href="https://web.cse.msu.edu/~cse842/Papers/CoverThomas-Ch2.pdf">Elements of Information Theory</a></li>
+                                    <li><a href="http://colah.github.io/posts/2015-09-Visual-Information/">Visual Information Theory</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/PreviousYearsHandouts/gauntlet.pdf">IT notes: Entropy of English</a></li>
                                 </ul>
                             </td>
-                            <td>
-                               <!--  <a href="slides/lec9.cnn.pdf">slides</a><br>
-				<a href="https://www.youtube.com/watch?v=WUKqug6qnBc">video</a> -->
-			                 </td>
                             <td></td>
-                            <td>Quiz 5</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>September 26</td>
-                            <td>
-                                <ul>
-                                    <li>Models of vision</li>
-                                    <li>Neocognitron</li>
-                                    <li>Mathematical details of CNNs</li>
-                                    <li>Alexnet, Inception, VGG</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="slides/lec10.CNN.pdf">slides</a><br>
-                <a href="https://www.youtube.com/watch?v=LEw3ADkod2k">video</a> -->
-                            </td>
-                            <td>
-                                <!--Goodfellow Chapter 10 -->
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>October 1</td>
-                            <td>
-                                <ul>
-                                    <li>Recurrent Neural Networks (RNNs)</li>
-                                    <li>Modeling series</li>
-                                    <li>Back propogation through time</li>
-                                    <li>Bidirectional RNNs</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="slides/lec11.recurrent.pdf">slides</a><br>
-                <a href="https://www.youtube.com/watch?v=6-xgyqKHKjc">video</a> -->
-                            </td>
-                            <td></td>
-                            <td>Quiz 6</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>October 3</td>
-                            <td>
-                                <ul>
-                                    <li>Stability</li>
-                                    <li>Exploding/vanishing gradients</li>
-                                    <li>Long Short-Term Memory Units (LSTMs) and variants</li>
-                                    <li>Resnets</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="slides/lec12.recurrent.pdf">slides</a><br>
-                <a href="https://www.youtube.com/watch?v=0xHxZ5mI3_Y">video</a> -->
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>October 8</td>
-                            <td>
-                                <ul>
-                                    <li>Loss functions for recurrent networks</li>
-                                    <li>Sequence prediction</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="slides/lec13.recurrent.pdf">slides</a><br>
-                <a href="https://www.youtube.com/watch?v=VdgLzqrv-II">video</a> -->
-                            </td>
-                            <td></td>
-                            <td>
-                                <font color="red">Assignment 2 due </font><br> Assignment 3<br>
-                            Quiz 7</td>
                         </tr>
                         <tr>
                             <td>14</td>
-                            <td>October 10</td>
+                            <td>September 17</td>
+                            <td>Clustering</td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/~roni/11761/PreviousYearsHandouts/classlm.pdf">Class LM</a>
+                            </td>
+                            <td>
+                                <!-- LN -->
+                            </td>
                             <td>
                                 <ul>
-                                    <li>Sequence To Sequence Methods</li>
-                                    <li>Connectionist Temporal Classification (CTC)</li>
+                                    <li>[MS] 14.1</li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/papers/lattice-TR-97-173.pdf">Lattice LM</a></li>
                                 </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="slides/lec14.recurrent.pdf">slides</a><br>
-                <a href="https://www.youtube.com/watch?v=c86gfVGcvh4">video</a> -->
-                            </td>
-                            <td>
-                                <!--ul>
-                                    <li>For PCA, Factor Analysis, Probabilistic PCA: Bishop Ch. 12</li>
-                                    <li>For Expectation Maximization / Variational Inference: Bishop Ch. 9.4, Ch. 10</li>
-                                </ul-->
                             </td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>15</td>
-                            <td>October 15</td>
+                            <td>15,16,17</td>
+                            <td>September 19</td>
                             <td>
                                 <ul>
-                                    <li>What to networks represent</li>
-                                    <li>Autoencoders and dimensionality reduction</li>
-                                    <li>Learning representations</li>
+                                    <li>Hidden Markov Models</li>
                                 </ul>
                             </td>
                             <td>
-                                <!-- <a href="slides/lec15.representations.pdf">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=754vWvIimPo">video</a> -->
+                               [MS] ch. 9
+			                 </td>
+                            <td>
+                                <!-- LN -->
                             </td>
                             <td>
-                                <!--ul>
-                                    <li><a href="https://arxiv.org/abs/1312.6114">Kingma, Diederik and Welling, Max (2014). Auto-Encoding Variational Bayes</a></li>
-                                    <li><a href="https://arxiv.org/abs/1312.6114">Kingma, Diederik and colleagues (2017). Improving Variational Inference with Inverse Autoregressive Flow</a></li>
-                                    <li><a href="https://arxiv.org/pdf/1702.08658.pdf">Zhao, Shengjia and colleagues (2017). Towards a Deeper Understanding of Variational Autoencoding Models</a></li>
-                                </ul-->
+                                <a href="http://www.cs.cmu.edu/~roni/11761/Presentations/rabiner.pdf">Larry Rabiner's classic HMM tutorial</a>
                             </td>
-                            <td>Quiz 8</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>16</td>
-                            <td>October 17</td>
+                            <td>18,19,20,21</td>
+                            <td>September 24</td>
                             <td>
                                 <ul>
-                                    <li>Sequence-to-sequence models, Attention models, examples from speech and language
-                                    </li>
-                                </ul>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>17</td>
-                            <td>October 22</td>
-                            <td>Variational Autoencoders (VAEs)</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>18</td>
-                            <td>October 24</td>
-                            <td>
-                                <ul>
-                                    <li>Generative Adversarial Networks (GANs) Part 1</li>
+                                    <li>Maximum Entropy Models</li>
+                                    <li>Whole-Sentence Models</li>
+                                    <li>Semantic Modeling</li>
                                 </ul>
                             </td>
                             <td>
-                               <!--  <a href="recitations/lec14-p2.attention.pdf">slides</a><br>
-                            <a href="https://www.youtube.com/watch?v=oiNFCbD_4Tk">video</a> -->
-                            </td>
-                            <td></td>
-                            <td><font color="red">Assignment 3 due </font><br>
-                            Quiz 9 <br>
-                            Assignments 4 and 5</td>
-                        </tr>
-                        <tr>
-                            <td>18</td>
-                            <td>October 31</td>
-                            <td>
                                 <ul>
-                                    <li>Generative Adversarial Networks (GANs) Part 2</li>
+                                    <li><a href="http://www.cs.cmu.edu/afs/cs/user/aberger/www/html/tutorial/tutorial.html">Adam Berger's online tutorial</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/Presentations/convexity-maximum-likelihood-and.pdf">Convexity, Maximum Likelihood, and All That</a></li>
                                 </ul>
                             </td>
                             <td>
-                               <!--  <a href="slides/lec18.GANs.part2.pdf">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=Yg36VeGHfrA">video</a> -->
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>19</td>
-                            <td>November 5</td>
+                               <!-- LN -->
+			                 </td>
                             <td>
-                                <ul>
-                                    <li>TBA</li>
+                                <ul> 
+                                    <li>[MS] 16.2</li>
+                                    <li><a href="http://www.cs.cmu.edu/~nasmith/papers/smith.tut04.pdf">Noah Smith's tutorial</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/PreviousYearsHandouts/ME-compling.pdf">[BDD]</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/papers/me-csl-revised.pdf">[rR]</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/Presentations/MaxEnt-Rosenfeld94.pdf">[rR slides]</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/Presentations/Modeling-MCMC-Logistic-Regression.pdf">using MCMC with language</a></li>
                                 </ul>
                             </td>
-                            <td>
-                                <!-- <a href="slides/lec19.NeuronCap.GeraldFriedland.pdf">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=D2FK6-Pgtxc&list=PLp-0K3kfddPzwUvp5-SGfGGAJ0_Zxzldt">video</a> -->
-                            </td>
                             <td></td>
-                            <td>Quiz 10</td>
-                        </tr>
-                        <tr>
-                            <td>20</td>
-                            <td>November 7</td>
-                            <td>
-                                <ul>
-                                    <li>Hopfield Networks</li>
-                                    <li>Energy functions</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="slides/lec20.hopfield.pdf">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=yl8znINLXdg">video</a> -->
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>21</td>
-                            <td>November 12</td>
-                            <td>
-                                <ul>
-                                    <li>Training Hopfield Networks</li>
-                                    <li>Stochastic Hopfield Networks</li>
-                                </ul>
-                            </td>
-                            <td>
-                              <!--   <a href="slides/lec21.hopfield.pdf">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=LtGdn9h5OSQ">video</a> -->
-                            </td>
-                            <td></td>
-                            <td>Quiz 11</td>
                         </tr>
                         <tr>
                             <td>22</td>
-                            <td>November 14</td>
+                            <td>September 26</td>
                             <td>
                                 <ul>
-                                    <li>Restricted Boltzman Machines</li>
-                                    <li>Deep Boltzman Machines</li>
+                                    <li>Latent Variable Models</li>
+                                    <li>EM Algorithm</li>
                                 </ul>
                             </td>
                             <td>
-                                <!-- <a href="https://www.youtube.com/watch?v=it_PXVIMyWg">video</a> -->
+                                <ul>
+                                    <li>[MS] 14.2</li>
+                                    <li>Notes by Guy Lebanon: <a href="http://www.cs.cmu.edu/~roni/11761/Presentations/emExample.pdf">Derivation of EM for Gaussian mixture</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/Presentations/emShortcut.pdf">EM derivation shortcut for exponential family</a></li>
+                                </ul>
                             </td>
-                            <td></td>
+                            <td>
+                                <!--LN -->
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/~roni/11761/PreviousYearsHandouts/em.pdf">More advanced EM notes by John Lafferty</a>
+                            </td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>23</td>
-                            <td>November 19</td>
-                            <td>
-                                <ul>
-                                    <li>Reinforcement Learning 1</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <!-- <a href="https://www.youtube.com/watch?v=YmARxEX-4PY">video</a> -->
-                            </td>
                             <td></td>
-                            <td>Quiz 12</td>
-                        </tr>
-                        <tr>
-                            <td>24</td>
-                            <td>November 21</td>
-                            <td>
-                                <ul>
-                                    <li>Thanksgiving Break - No Classes</li>
-                                </ul>
-                                
-                            </td>
+                            <td>Review</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>24</td>
-                            <td>November 26</td>
-                            <td>
-                                <ul>
-                                    <li>Reinforcement Learning 2</li>
-                                </ul>
-                            </td>
+                            <td></td>
+                            <td>Exam</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
-                       <!--  <tr>
+                        <tr>
                             <td>25</td>
-                            <td>November 26</td>
+                            <td>October 1</td>
                             <td>
                                 <ul>
-                                    <li>Reinforcement Learning 3</li>
+                                    <li>Probabilistic Context Free Grammars (PCFG)</li>
+                                    <li>The Inside-Outside Algorithm</li>
                                 </ul>
                             </td>
+                            <td>
+                                <ul>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/PreviousYearsHandouts/pcfg-notes.pdf">Notes on Probabilistic Context Free Grammars</a></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- LN -->
+                            </td>
+                            <td>[MS] 11.1-11.4</td>
                             <td></td>
-                            <td></td>
-                            <td>Quiz 13</td>
-                        </tr> -->
+                        </tr>
                         <tr>
                             <td>26</td>
-                            <td>November 28</td>
-                            <td><ul>
-                                    <li>Reinforcement Learning 3</li>
+                            <td>October 3</td>
+                            <td>
+                                <ul>Semantic representation (embedding):
+                                    <li>Latent Semantic Analysis</li>
+                                    <li>Dimensionality Reduction</li>
+                                    <li>cf. Word2vec</li>
                                 </ul>
                             </td>
-                            <td></td>
-                            <td></td>
-                            <td><font color="red">Assignments 4 and 5 due </font></td>
-                        </tr>
-                        <tr>
-                            <td>27</td>
-                            <td>December 3</td>
                             <td>
                                 <ul>
-                                    <li>Q Learning</li>
-                                    <li>Deep Q Learning</li>
+                                <li><a href="http://ieeexplore.ieee.org/iel4/89/15387/00709671.pdf">Bellegarda 99</a></li>
+                                    <li><a href="http://www.cob.unt.edu/itds/faculty/evangelopoulos/dsci5910/LSA_Deerwester1990.pdf">Indexing by latent semantic analysis</a></li>
                                 </ul>
                             </td>
+                            <td>
+                                <!-- LN -->
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="http://ieeexplore.ieee.org/iel5/89/17730/00817455.pdf">Bellegarda 00</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~roni/11761/Presentations/lsi.pdf">Yan Liu's Slides</a></li>
+                                    <li><a href="http://www.cs.brown.edu/~th/papers/Hofmann-UAI99.pdf">Hoffmann 99</a></li>
+                                    <li><a href="http://www.cs.brown.edu/people/th/papers/GildeaHofmann-EUROSPEECH99.pdf">Gildea and Hofmann 99</a></li>
+                                    <li><a href="http://www.cs.cmu.edu/~antoine/papers/icslp2004a.pdf">Raux and Singh 04</a></li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>27,28</td>
+                            <td></td>
+                            <td>Exam</td>
+                            <td><b>Mandatory Class Attendance</b></td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>28</td>
-                            <td>December 5</td>
+                            <td>Overflow Material</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>October 8</td>
                             <td>
                                 <ul>
-                                    <li>Newer models and trends</li>
-                                    <li>Review</li>
+                                    <li>Syntactic Language Models</li>
                                 </ul>
                             </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/~roni/11761/Presentations/camera_ready.EUROSP99.fred.pdf">Jelinek and Chelba 99</a>
+                            </td>
                             <td></td>
-                            <td></td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/~roni/11761/Presentations/slides.ACL98.pdf">Chelba Slides 98</a>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>October 10</td>
+                            <td>
+                                <ul>
+                                    <li>Decision Tree Language Models</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://ieeexplore.ieee.org/iel1/29/1399/00032278.pdf">[BBDM]</a>
+                            </td>
+                            <td>
+                                <!-- LN -->
+                            </td>
+                            <td>[MS] 16.1</td>
                             <td></td>
                         </tr>
                     </tbody>
                 </table>
-            <h2>Tentative Schedule of Recitations (Note: dates may shift)</h2>
-
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Recitation</th>
-                            <th>Start date</th>
-                            <th>Topics</th>
-			    <th>Lecture notes/Slides</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>August 27</td>
-                            <td>Amazon Web Services (AWS)</td>
-			                 <td>
-                    <!-- <a href="recitations/rec1.aws.pdf">slides</a><br><a href="recitations/rec1.aws.mp4">video</a><br>
-<a href="http://deeplearning.cs.cmu.edu/recitations/rec1.aws.mp4">video</a> -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>September 7</td>
-                            <td>Your first Deep Learning Code</td>
-			    <td>
-                    <!-- <a href="recitations/rec2.basics.pdf">slides</a><br><a href="https://www.youtube.com/watch?v=7UWXJaV-jUQ">video</a> -->
-                </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>September 14</td>
-                            <td>Efficient Deep Learning/Optimization Methods</td>
-			    <td>
-                    <!-- <a href="recitations/rec3.optimization.pdf">slides</a><br>
-				<a href="https://www.youtube.com/watch?v=_MajYORh1I0">video</a> -->
-			    </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>September 21</td>
-                            <td>Convolutional Neural Networks</td>
-			                <td>
-                                <!-- <a href="recitations/rec4.cnn.pptx">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=nKmeFKEEcwI">video</a> -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>September 28</td>
-                            <td>Debugging and Visualization</td>
-			                <td>
-                                <!-- <a href="recitations/rec5.rnn.pdf">slides</a><br>
-                            <a href="https://www.youtube.com/watch?v=vYfIpfGL0ZU">video</a> -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>October 5</td>
-                            <td>Basics of Recurrent Neural Networks</td>
-                            <td>
-                                <!-- <a href="recitations/rec6.seq2seqlossesctc.pdf">slides</a><br>
-                                <a href="https://www.youtube.com/watch?v=e0ia-mN-7Kk">video</a> -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>October 12</td>
-                            <td>Recurrent networks 2: Loss functions, CTC</td>
-                            <td>
-                                <!-- <a href="recitations/rec7.visualization.pdf">slides</a><br>
-                            <a href="https://www.youtube.com/watch?v=yzBfOqzfnUg">video</a> -->
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>October 19</td>
-                            <td>Attention</td>
-                            <td>
-                                <!-- <a href="recitations/rec7.visualization.pdf">slides</a><br>
-                            <a href="https://www.youtube.com/watch?v=yzBfOqzfnUg">video</a> -->
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>October 26</td>
-                            <td>Research in Deep Learning</td>
-                            <td>
-                                <!-- <a href="recitations/rec8.attention.pdf">slides</a><br>
-                            <a href="https://www.youtube.com/watch?v=eAWdqbNFRPA">video</a> -->
-                        </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>November 2</td>
-                            <td>Variational autoencoders</td>
-			                 <td>
-                               <!--  <a href="recitations/rec9.vae.pdf">slides</a><br>
-                            <a href="https://www.youtube.com/watch?v=9RT_t_9RCTs">video</a> -->
-                        </td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>November 9</td>
-                            <td>GANs</td>
-			    <td>
-                    <!-- <a href="https://www.youtube.com/watch?v=YLHYlJd17p4&list=PLp-0K3kfddPzmXfMlseUbjJySOUYtNhVX">video</a> -->
-                </td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>November 16</td>
-                            <td>Reinforcement Learning</td>
-			    <td>
-                    <!-- <a href = "https://www.youtube.com/watch?v=ULhYUewFGKY&list=PLp-0K3kfddPzi2tb2PwoTmii8lwBmOqg7">video</a> -->
-                </td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-
-                            <td>November 30</td>
-                            <td>Hopfield Nets, Boltzmann machines, RBMs</td>
-			    <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h3> Abbreviations (in order of appearance): </h3>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <td>Abbreviation</td>
+                        <td>Book</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[MS]</td>
+                        <td>Manning and Schutze, Foundations of Statistical Natural Language Processing.</td>
+                    </tr>
+                    <tr>
+                        <td>[BCW]</td>
+                        <td>Bell, Cleary and Witten, Text Compression.</td>
+                    </tr>
+                    <tr>
+                        <td>[mD]</td>
+                        <td>Morris DeGroot, Probability and Statistics, 2nd edition.</td>
+                    </tr>
+                    <tr>
+                        <td>[sK]</td>
+                        <td>Slava M. Katz, "Estimation of probabilities from sparse data for the language model component of a speech recognizer", IEEE Transactions on Acoustic, Speech and Signal Processing, vol. 35, no. 3, pp. 400-401, 1987.</td>
+                    </tr>
+                    <tr>
+                        <td>[BBDM]</td>
+                        <td>L. Bahl, P. Brown, P. de Souza and R. Mercer, "A tree-based statistical language model for natural language speech recognition", IEEE Transactions on Acoustic, Speech and Signal Processing, vol. 37, no. 7, pp. 1001-1008, 1989.</td>
+                    </tr>
+                    <tr>
+                        <td>[rR]</td>
+                        <td>Roni Rosenfeld, "A maximum entropy approach to adaptive statistical language modeling", Speech and Language, vol. 10, pp. 187-228, 1996.</td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
         </div>
     </div>
